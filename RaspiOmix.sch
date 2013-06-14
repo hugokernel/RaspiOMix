@@ -16520,6 +16520,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="VSS33" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
+<part name="C6" library="rcl" deviceset="CPOL-EU" device="B/3528-21R"/>
+<part name="+3V12" library="supply1" deviceset="+3V3" device=""/>
+<part name="VSS34" library="supply1" deviceset="VSS" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16882,6 +16885,13 @@ Clock</text>
 <instance part="+3V10" gate="G$1" x="266.7" y="38.1" smashed="yes">
 <attribute name="VALUE" x="269.24" y="40.64" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="C6" gate="G$1" x="327.66" y="114.3"/>
+<instance part="+3V12" gate="G$1" x="327.66" y="121.92" smashed="yes">
+<attribute name="VALUE" x="330.2" y="124.46" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="VSS34" gate="G$1" x="327.66" y="104.14" smashed="yes">
+<attribute name="VALUE" x="330.2" y="101.6" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -17118,6 +17128,11 @@ Clock</text>
 <pinref part="VSS33" gate="G$1" pin="VSS"/>
 <wire x1="266.7" y1="20.32" x2="266.7" y2="22.86" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="-"/>
+<pinref part="VSS34" gate="G$1" pin="VSS"/>
+<wire x1="327.66" y1="106.68" x2="327.66" y2="109.22" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -17346,6 +17361,11 @@ Clock</text>
 <pinref part="J_ADR1" gate="G$1" pin="3"/>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
 <wire x1="266.7" y1="35.56" x2="266.7" y2="33.02" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="+"/>
+<pinref part="+3V12" gate="G$1" pin="+3V3"/>
+<wire x1="327.66" y1="119.38" x2="327.66" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PI_TX" class="0">
