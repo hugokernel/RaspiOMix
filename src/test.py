@@ -14,17 +14,14 @@ class Raspiomix:
     IO2 = 13
     IO3 = 15
 
+    ADC_I2C_ADDRESS = 0x6E
+
+    DEVICE = '/dev/ttyAMA0'
+
     def __init(self):
         pass
 
 class Raspiomix_Test(Raspiomix):
-
-    IO0 = 7
-    IO1 = 11
-    IO2 = 13
-    IO3 = 15
-
-    device = '/dev/ttyAMA0'
 
     def __init__(self):
         # Init mode
@@ -71,7 +68,7 @@ class Raspiomix_Test(Raspiomix):
             time.sleep(2)
 
     def serial(self):
-        ser = serial.Serial(self.device, 9600, timeout = 1)
+        ser = serial.Serial(self.DEVICE, 9600, timeout = 1)
 
         while True:
             character = random.choice(string.letters)
@@ -81,9 +78,6 @@ class Raspiomix_Test(Raspiomix):
             time.sleep(1)
 
     def analog(self):
-
-
-        adc_address1 = 0x6E
 
         varDivisior = 64 # from pdf sheet on adc addresses and config
         varMultiplier = (3.3/varDivisior)/1000
@@ -104,14 +98,14 @@ class Raspiomix_Test(Raspiomix):
                 return t * varMultiplier
 
             while True:
-                changechannel(adc_address1, 0x9C)
-                print ("Channel 1: %02f" % getadcreading(adc_address1))
-                changechannel(adc_address1, 0xBC)
-                print ("Channel 2: %02f" % getadcreading(adc_address1))
-                changechannel(adc_address1, 0xDC)
-                print ("Channel 3: %02f" % getadcreading(adc_address1))
-                changechannel(adc_address1, 0xFC)
-                print ("Channel 4: %02f" % getadcreading(adc_address1))
+                changechannel(self.ADC_I2C_ADDRESS, 0x9C)
+                print ("Channel 1: %02f" % getadcreading(self.ADC_I2C_ADDRESS))
+                changechannel(self.ADC_I2C_ADDRESS, 0xBC)
+                print ("Channel 2: %02f" % getadcreading(self.ADC_I2C_ADDRESS))
+                changechannel(self.ADC_I2C_ADDRESS, 0xDC)
+                print ("Channel 3: %02f" % getadcreading(self.ADC_I2C_ADDRESS))
+                changechannel(self.ADC_I2C_ADDRESS, 0xFC)
+                print ("Channel 4: %02f" % getadcreading(self.ADC_I2C_ADDRESS))
                 print('--')
                 time.sleep(0.5)
 

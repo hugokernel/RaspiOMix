@@ -118,7 +118,7 @@
 </layers>
 <board>
 <plain>
-<text x="2.54" y="24.765" size="1.778" layer="25">+5V</text>
+<text x="7.9375" y="25.4" size="1.778" layer="25">+5V</text>
 <text x="26.3525" y="10.16" size="1.778" layer="25">I2C 1</text>
 <text x="14.9225" y="10.16" size="1.778" layer="25">I2C 0</text>
 <text x="1.905" y="10.16" size="1.778" layer="25">SERIAL</text>
@@ -141,7 +141,7 @@
 <wire x1="68.42125" y1="12.54125" x2="71.91375" y2="13.49375" width="0.127" layer="25"/>
 <text x="4.1275" y="37.465" size="1.27" layer="25">DIP0</text>
 <text x="4.1275" y="28.575" size="1.27" layer="25">DIP1</text>
-<text x="41.5925" y="25.4" size="1.4224" layer="25">rev 1.0.1</text>
+<text x="41.5925" y="25.4" size="1.4224" layer="25">rev 1.x.x</text>
 <text x="35.56" y="27.305" size="1.9304" layer="25">RaspiO'Mix</text>
 <text x="22.225" y="24.13" size="1.4224" layer="25">CC-BY-SA </text>
 <text x="10.795" y="2.2225" size="1.778" layer="26" rot="MR0">SERIAL</text>
