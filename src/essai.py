@@ -1,7 +1,7 @@
 
 import sys, tty, copy
 from time import sleep
-from test import Raspiomix
+from raspiomix import Raspiomix
 import serial
 import RPi.GPIO as GPIO
 import quick2wire.i2c as i2c
@@ -17,54 +17,7 @@ ios = [
 
 import random
 
-with i2c.I2CMaster() as bus:
-
-    array = random.sample(range(10), 5)
-    array[0] = 0
-    #array = bytes([random.randrange(1, 255) for _ in range(0, 5)])
-    #print(bytes(array))
-
-    address = 0x50
-    bus.transaction(
-        #i2c.writing(address, bytes([0x00, 0x01, 0xee, 0xff, 0xcc])),
-        i2c.writing(address, bytes(array)) #[0x00, 0x01, 0xee, 0xff, 0xcc])),
-    )
-
-    sleep(1)
-
-    read_results = bus.transaction(
-        i2c.writing_bytes(address, 0x00),
-        i2c.reading(address, 5)
-    )
-
-    for i in range(0, 4):
-        if read_results[0][i] != array[i + 1]:
-            print('Different !')
-
-sys.exit()
-
 GPIO.setmode(GPIO.BOARD)
-
-def main(win):
-    win.nodelay(True) # make getkey() not wait
-    x = 0
-    while True:
-    #just to show that the loop runs, print a counter
-        win.clear()
-        win.addstr(0,0,str(x))
-        x += 1
-
-        sleep(1)
-
-        try:
-            key = win.getkey()
-        except: # in no delay mode getkey raise and exeption if no key is press 
-            key = None
-            if key == " ": # of we got a space then break
-             break
-
-
-curses.wrapper(main)
 
 def waitEnter():
     tty.setcbreak(sys.stdin)
