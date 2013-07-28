@@ -16410,7 +16410,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="VSS27" library="supply1" deviceset="VSS" device=""/>
 <part name="VSS41" library="supply1" deviceset="VSS" device=""/>
 <part name="POWER" library="led" deviceset="LED" device="CHIPLED_0805"/>
-<part name="R14" library="rcl" deviceset="R-EU_" device="M0805" value="470"/>
+<part name="R14" library="rcl" deviceset="R-EU_" device="M0805" value="330"/>
 <part name="VSS32" library="supply1" deviceset="VSS" device=""/>
 <part name="P+12" library="supply1" deviceset="+5V" device=""/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
