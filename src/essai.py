@@ -113,7 +113,7 @@ def testAnalog():
     print("> Insert analog connector and press [Enter]")
     waitEnter()
 
-    with i2c.I2CMaster() as bus:
+    with i2c.I2CMaster(n = 1) as bus:
         def changechannel(address, adcConfig):
             bus.transaction(i2c.writing_bytes(address, adcConfig))
 
@@ -130,17 +130,17 @@ def testAnalog():
 
         chan = last = [ 0, 0, 0, 0 ]
         while True:
-            changechannel(Raspiomix.ADC_I2C_ADDRESS, 0x9C)
-            chan[0] = round(getadcreading(Raspiomix.ADC_I2C_ADDRESS), 2)
+            changechannel(Raspiomix.I2C_ADC_ADDRESS, 0x9C)
+            chan[0] = round(getadcreading(Raspiomix.I2C_ADC_ADDRESS), 2)
 
-            changechannel(Raspiomix.ADC_I2C_ADDRESS, 0xBC)
-            chan[1] = round(getadcreading(Raspiomix.ADC_I2C_ADDRESS), 2)
+            changechannel(Raspiomix.I2C_ADC_ADDRESS, 0xBC)
+            chan[1] = round(getadcreading(Raspiomix.I2C_ADC_ADDRESS), 2)
 
-            changechannel(Raspiomix.ADC_I2C_ADDRESS, 0xDC)
-            chan[2] = round(getadcreading(Raspiomix.ADC_I2C_ADDRESS), 2)
+            changechannel(Raspiomix.I2C_ADC_ADDRESS, 0xDC)
+            chan[2] = round(getadcreading(Raspiomix.I2C_ADC_ADDRESS), 2)
 
-            changechannel(Raspiomix.ADC_I2C_ADDRESS, 0xFC)
-            chan[3] = round(getadcreading(Raspiomix.ADC_I2C_ADDRESS), 2)
+            changechannel(Raspiomix.I2C_ADC_ADDRESS, 0xFC)
+            chan[3] = round(getadcreading(Raspiomix.I2C_ADC_ADDRESS), 2)
 
             for index in range(0, 4):
                 if chan[index] != last[index]:
