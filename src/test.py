@@ -139,6 +139,9 @@ class Analog(Window):
 
         varDivisior = 64 # from pdf sheet on adc addresses and config
         varMultiplier = (3.3/varDivisior)/1000
+        import sys
+        #sys.exit(varMultiplier)
+        varMultiplier = 0.0000386
 
         channels = [ 0, 0, 0, 0 ]
 
