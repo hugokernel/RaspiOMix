@@ -16543,6 +16543,93 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="battery-holder">
+<packages>
+<package name="HARWIN-CR1220">
+<smd name="NEG" x="0" y="8.26" dx="2.3" dy="4.3" layer="1"/>
+<smd name="POS" x="0" y="-7.58" dx="2.3" dy="3.66" layer="1"/>
+<hole x="0" y="3.75" drill="1"/>
+<hole x="0" y="-3.75" drill="1.25"/>
+<wire x1="-7" y1="-6.25" x2="-7" y2="-6.75" width="0.127" layer="51"/>
+<wire x1="7" y1="-6.75" x2="7" y2="-6.25" width="0.127" layer="51"/>
+<wire x1="-7" y1="-6.25" x2="-6.5" y2="-5.75" width="0.127" layer="51" curve="-90"/>
+<wire x1="-6.5" y1="-7.25" x2="-7" y2="-6.75" width="0.127" layer="51" curve="-90"/>
+<wire x1="6.5" y1="-5.75" x2="7" y2="-6.25" width="0.127" layer="51" curve="-90"/>
+<wire x1="7" y1="-6.75" x2="6.5" y2="-7.25" width="0.127" layer="51" curve="-90"/>
+<wire x1="-6.5" y1="-7.25" x2="-4.5" y2="-7.25" width="0.127" layer="51"/>
+<wire x1="-4.5" y1="-7.25" x2="-2.5" y2="-7.75" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="-7.75" x2="-2" y2="-7.75" width="0.127" layer="51"/>
+<wire x1="-2" y1="-6.75" x2="-6.5" y2="-6.75" width="0.127" layer="51"/>
+<wire x1="-6.5" y1="-6.75" x2="-6.5" y2="-6.25" width="0.127" layer="51"/>
+<wire x1="-6.5" y1="-6.25" x2="-3.5" y2="-6.25" width="0.127" layer="51"/>
+<wire x1="-2" y1="-6.75" x2="-2" y2="-7.75" width="0.127" layer="51" curve="-180"/>
+<wire x1="-3" y1="-5.75" x2="-3.5" y2="-6.25" width="0.127" layer="51" curve="-90"/>
+<wire x1="-3" y1="-5.75" x2="-3" y2="-5.5" width="0.127" layer="51"/>
+<wire x1="-6.5" y1="-5.75" x2="-5" y2="-5.75" width="0.127" layer="51"/>
+<wire x1="-3.25" y1="-5" x2="-3" y2="-5.5" width="0.127" layer="51" curve="-53.130102"/>
+<wire x1="-4.75" y1="-5.25" x2="-5" y2="-5.75" width="0.127" layer="51" curve="-120"/>
+<wire x1="3" y1="-5.5" x2="3.25" y2="-5" width="0.127" layer="51" curve="-36.869898"/>
+<wire x1="-3.25" y1="-5" x2="3.25" y2="-5" width="0.127" layer="51" curve="-299.963265"/>
+<wire x1="-4.75" y1="-5.25" x2="4.75" y2="-5.25" width="0.127" layer="51" curve="-282.088184"/>
+<wire x1="5" y1="-5.75" x2="4.75" y2="-5.25" width="0.127" layer="51" curve="-120"/>
+<wire x1="5" y1="-5.75" x2="6.5" y2="-5.75" width="0.127" layer="51"/>
+<wire x1="3" y1="-5.5" x2="3" y2="-5.75" width="0.127" layer="51"/>
+<wire x1="3.5" y1="-6.25" x2="3" y2="-5.75" width="0.127" layer="51" curve="-90"/>
+<wire x1="3.5" y1="-6.25" x2="6.5" y2="-6.25" width="0.127" layer="51"/>
+<wire x1="6.5" y1="-6.25" x2="6.5" y2="-6.75" width="0.127" layer="51"/>
+<wire x1="6.5" y1="-6.75" x2="2" y2="-6.75" width="0.127" layer="51"/>
+<wire x1="2" y1="-7.75" x2="2" y2="-6.75" width="0.127" layer="51" curve="-180"/>
+<wire x1="2" y1="-7.75" x2="2.5" y2="-7.75" width="0.127" layer="51"/>
+<wire x1="2.5" y1="-7.75" x2="4.5" y2="-7.25" width="0.127" layer="51"/>
+<wire x1="4.5" y1="-7.25" x2="6.5" y2="-7.25" width="0.127" layer="51"/>
+<wire x1="-6.25" y1="-6.5" x2="-1.75" y2="-6.5" width="0.127" layer="51"/>
+<wire x1="-1.75" y1="-6.5" x2="1.75" y2="-6.5" width="0.127" layer="51"/>
+<wire x1="1.75" y1="-6.5" x2="6.25" y2="-6.5" width="0.127" layer="51"/>
+<wire x1="-1.75" y1="-6.5" x2="-1.75" y2="-6" width="0.127" layer="51"/>
+<wire x1="-1.75" y1="-6" x2="-2.25" y2="-5.5" width="0.127" layer="51"/>
+<wire x1="-2.25" y1="-5.5" x2="2.25" y2="-5.5" width="0.127" layer="51"/>
+<wire x1="2.25" y1="-5.5" x2="1.75" y2="-6" width="0.127" layer="51"/>
+<wire x1="1.75" y1="-6" x2="1.75" y2="-6.5" width="0.127" layer="51"/>
+<wire x1="-1.75" y1="-6" x2="1.75" y2="-6" width="0.127" layer="51"/>
+<rectangle x1="-0.75" y1="-9" x2="0.75" y2="-6.5" layer="51"/>
+<rectangle x1="-0.75" y1="8.125" x2="0.75" y2="10" layer="51"/>
+<text x="-3" y="0" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3" y="-1.75" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="CR2032">
+<pin name="POS" x="0" y="7.62" visible="off" length="short" rot="R270"/>
+<pin name="NEG" x="0" y="-5.08" visible="off" length="short" rot="R90"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="0" x2="3.81" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="5.08" x2="3.81" y2="5.08" width="0.254" layer="94"/>
+<text x="5.08" y="2.54" size="1.27" layer="95">&gt;NAME</text>
+<text x="5.08" y="0" size="1.27" layer="96">&gt;VALUE</text>
+<wire x1="2.032" y1="6.35" x2="3.048" y2="6.35" width="0.254" layer="94"/>
+<wire x1="2.54" y1="5.842" x2="2.54" y2="6.858" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CR1220-HOLDER">
+<gates>
+<gate name="G$1" symbol="CR2032" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HARWIN-CR1220">
+<connects>
+<connect gate="G$1" pin="NEG" pad="NEG"/>
+<connect gate="G$1" pin="POS" pad="POS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -16602,10 +16689,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="R2" library="rcl" deviceset="R-EU_" device="M0805" value="10k"/>
 <part name="VSS6" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
-<part name="R26" library="rcl" deviceset="R-EU_" device="M0805" value="10k 1%"/>
-<part name="R24" library="rcl" deviceset="R-EU_" device="M0805" value="10k 1%"/>
-<part name="R22" library="rcl" deviceset="R-EU_" device="M0805" value="10k 1%"/>
-<part name="R20" library="rcl" deviceset="R-EU_" device="M0805" value="10k 1%"/>
+<part name="R26" library="rcl" deviceset="R-EU_" device="M0805" value="10k 0.1%"/>
+<part name="R24" library="rcl" deviceset="R-EU_" device="M0805" value="10k 0.1%"/>
+<part name="R22" library="rcl" deviceset="R-EU_" device="M0805" value="10k 0.1%"/>
+<part name="R20" library="rcl" deviceset="R-EU_" device="M0805" value="10k 0.1%"/>
 <part name="R27" library="rcl" deviceset="R-EU_" device="M0805" value="6.8k 1%"/>
 <part name="R25" library="rcl" deviceset="R-EU_" device="M0805" value="6.8k 1%"/>
 <part name="R23" library="rcl" deviceset="R-EU_" device="M0805" value="6.8k 1%"/>
@@ -16675,6 +16762,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="VSS35" library="supply1" deviceset="VSS" device=""/>
 <part name="VSS36" library="supply1" deviceset="VSS" device=""/>
 <part name="IO6" library="testpad" deviceset="TP" device="PAD1-13"/>
+<part name="U$2" library="battery-holder" deviceset="CR1220-HOLDER" device=""/>
+<part name="VSS37" library="supply1" deviceset="VSS" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17056,6 +17145,10 @@ Clock</text>
 <attribute name="VALUE" x="142.24" y="144.78" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="IO6" gate="G$1" x="218.44" y="170.18"/>
+<instance part="U$2" gate="G$1" x="106.68" y="157.48"/>
+<instance part="VSS37" gate="G$1" x="106.68" y="147.32" smashed="yes">
+<attribute name="VALUE" x="109.22" y="144.78" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -17301,6 +17394,11 @@ Clock</text>
 <wire x1="142.24" y1="157.48" x2="139.7" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="157.48" x2="139.7" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="VSS36" gate="G$1" pin="VSS"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="NEG"/>
+<wire x1="106.68" y1="152.4" x2="106.68" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="VSS37" gate="G$1" pin="VSS"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -17648,6 +17746,9 @@ Clock</text>
 <wire x1="132.08" y1="167.64" x2="132.08" y2="162.56" width="0.1524" layer="91"/>
 <junction x="132.08" y="167.64"/>
 <junction x="116.84" y="167.64"/>
+<wire x1="116.84" y1="167.64" x2="106.68" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="POS"/>
+<wire x1="106.68" y1="167.64" x2="106.68" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="INTC" class="0">
