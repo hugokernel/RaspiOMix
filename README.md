@@ -14,6 +14,17 @@ Specifications
 - 1 serial external connector
 - Power input via jack
 
+Python example :
+
+    >>> from raspiomix import Raspiomix
+    >>> r = Raspiomix()
+    >>> r.readRtc()
+    2014-11-12T20:41:26
+    >>> print(r.readAdc(0))
+    [4.0669732000000005]
+    >>>print(r.readAdc((0, 1, 2, 3)))
+    [4.066934600000001, 0.010923800000000001, 0.08515160000000001, 0.2866822]
+
 --
 
 Une carte fille pour RaspberryPi avec entrées / sorties tolérantes au 5V et des connecteurs compatible Grove.
