@@ -3,15 +3,26 @@
 class Raspiomix_Base:
 
     '''
-    RaspiOMix version 1.1.0
-    '''
-
+    RaspiOMix version 1.0.1
     IO0 = 7
     IO1 = 11
     IO2 = 13
     IO3 = 15
 
     DIP0 = 12
+    DIP1 = 16
+    '''
+
+    '''
+    RaspiOMix version 1.1.0
+    '''
+
+    IO0 = 12
+    IO1 = 11
+    IO2 = 13
+    IO3 = 15
+
+    DIP0 = 7
     DIP1 = 16
 
     I2C_ADC_ADDRESS = 0x6E
@@ -69,7 +80,7 @@ class Raspiomix(Raspiomix_Base):
 
             out.append(format(h, m, l))
 
-        return out
+        return out[0] if type(channels) == int else out
 
     def readRtc(self):
         '''
