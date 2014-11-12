@@ -1,13 +1,17 @@
 #!/usr/bin/python
 
-import curses, random, string
+import curses
+import random
+import string
+import smbus
 from copy import copy
 from time import sleep
 
 from raspiomix import Raspiomix
 import serial
 import RPi.GPIO as GPIO
-import quick2wire.i2c as i2c
+
+raspi = Raspiomix()
 
 info = None
 GPIOS = [
@@ -18,6 +22,13 @@ GPIOS = [
     Raspiomix.DIP0,
     Raspiomix.DIP1
 ]
+
+'''
+ Channel #0 : [========================================================================================] 5.42
+ Channel #1 : [=                                                                                       ] 0.01
+ Channel #2 : [===                                                                                     ] 0.12
+ Channel #3 : [=======                                                                                 ] 0.38
+'''
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
@@ -135,6 +146,7 @@ class Analog(Window):
         self.pad.border()
         self.pad.addstr(0, 2, "Analog", curses.A_BOLD)
 
+<<<<<<< Updated upstream:src/test.py
     def read(self):
 
         varDivisior = 64 # from pdf sheet on adc addresses and config
@@ -174,8 +186,10 @@ class Analog(Window):
 
             return channels
 
+=======
+>>>>>>> Stashed changes:src__/python/test.py
     def update(self, key = None):
-        self.current = self.read()
+        self.current = raspi.readAdc((0, 1, 2, 3))
 
         width = self.size[1]
 
@@ -209,8 +223,8 @@ class I2C(Window):
         self.pad.border()
         self.pad.addstr(0, 2, "I2C", curses.A_BOLD)
 
-    def bcd2int(self, val):
-        return ((val / 16 * 10) + (val % 16))
+    #def bcd2int(self, val):
+    #    return ((val / 16 * 10) + (val % 16))
 
     def update(self, key = None):
 
@@ -224,6 +238,7 @@ class I2C(Window):
             self.pad.addstr(2, 3, "Internal (RTC) :")
 
             try:
+                '''
                 with i2c.I2CMaster() as bus:
 
                     bus.transaction(
@@ -238,6 +253,12 @@ class I2C(Window):
                     self.pad.addstr(3, 3, " %02i:%02i:%02i Ok !" % (self.bcd2int(hours & 0b0111111), self.bcd2int(minut), self.bcd2int(second)))
 
                     self.internal_done = True
+                '''
+
+                self.pad.addstr(3, 3, '%s Ok !' % raspi.readRtc())
+
+                self.internal_done = True
+
             except:
                 self.pad.addstr(3, 3, " - Writing, Reading : Ko !")
             finally:
@@ -246,6 +267,32 @@ class I2C(Window):
         if self.external_done == False:
             self.pad.addstr(5, 3, "External (EEPROM) :")
             try:
+                self.pad.addstr(6, 3, " - Writing")
+                self.refresh()
+
+                array = random.sample(range(10), 5)
+                #array[0] = 0
+
+                raspi.i2c.write_byte_data(self.EEPROM_ADDRESS, 0x00, array[0])
+
+                sleep(0.05)
+
+                out = raspi.i2c.read_byte(self.EEPROM_ADDRESS, 0x00)
+
+                self.pad.addstr(6, 3, " - Writing, Reading")
+                self.refresh()
+
+                for i in range(0, 4):
+                    if read_results[0][i] != array[i + 1]:
+                        raise
+                
+                #self.pad.addstr(6, 3, " - Writing, Reading : Ok !")
+                self.pad.addstr(6, 3, '->' + array[0] + out)
+
+                self.external_done = True
+
+
+                '''
                 with i2c.I2CMaster() as bus:
 
                     self.pad.addstr(6, 3, " - Writing")
@@ -275,8 +322,10 @@ class I2C(Window):
                     self.pad.addstr(6, 3, " - Writing, Reading : Ok !")
 
                     self.external_done = True
-            except:
+                ''' 
+            except IOError as e:
                 self.pad.addstr(6, 3, " - Writing, Reading : Ko !")
+                #self.pad.addstr(6, 3, str(e))
             finally:
                 self.refresh()
 
