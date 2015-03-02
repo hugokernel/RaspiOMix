@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -21893,20 +21893,8 @@ Alert output</description>
 <part name="VSS38" library="supply1" deviceset="VSS" device=""/>
 <part name="VSS39" library="supply1" deviceset="VSS" device=""/>
 <part name="VSS40" library="supply1" deviceset="VSS" device=""/>
-<part name="CON_IO_0" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_IO_1" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_IO_2" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_IO_3" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_AN_0" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_AN_1" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_AN_2" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_AN_3" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_I2C_1" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_I2C_0" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_SERIAL" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
 <part name="VSS41" library="supply1" deviceset="VSS" device=""/>
 <part name="P+15" library="supply1" deviceset="+5V" device=""/>
-<part name="CON_I2C_2" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
 <part name="C11" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
 <part name="VSS44" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
@@ -21947,10 +21935,6 @@ Alert output</description>
 <part name="C10" library="rcl" deviceset="CPOL-EU" device="B/3528-21R"/>
 <part name="+3V20" library="supply1" deviceset="+3V3" device=""/>
 <part name="VSS64" library="supply1" deviceset="VSS" device=""/>
-<part name="CON_AN_4" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_AN_5" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_AN_6" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_AN_7" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
 <part name="IC2" library="adafruit" deviceset="TXB0104PWR" device=""/>
 <part name="IC4" library="eagleParts" deviceset="MCP3424-E/ST" device=""/>
 <part name="IC5" library="eagleParts" deviceset="MCP3424-E/ST" device=""/>
@@ -21972,10 +21956,6 @@ Alert output</description>
 <part name="P+21" library="supply1" deviceset="+5V" device=""/>
 <part name="VSS70" library="supply1" deviceset="VSS" device=""/>
 <part name="P+22" library="supply1" deviceset="+5V" device=""/>
-<part name="CON_IO_4" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_IO_5" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_IO_6" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
-<part name="CON_IO_7" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device=""/>
 <part name="+3V24" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V25" library="supply1" deviceset="+3V3" device=""/>
 <part name="JP1" library="FLYFISH" deviceset="PIN2" device="_100"/>
@@ -21998,6 +21978,33 @@ Alert output</description>
 <part name="TP10" library="testpad" deviceset="TP" device="TP12R"/>
 <part name="TP11" library="testpad" deviceset="TP" device="TP12R"/>
 <part name="TP12" library="testpad" deviceset="TP" device="TP12R"/>
+<part name="J_ADR4" library="jumper" deviceset="SJ2W" device=""/>
+<part name="+3V28" library="supply1" deviceset="+3V3" device=""/>
+<part name="VSS72" library="supply1" deviceset="VSS" device=""/>
+<part name="TALM" library="testpad" deviceset="TP" device="TP12R"/>
+<part name="CON_I2C_0" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_I2C_1" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_I2C_2" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_SERIAL" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_IO_0" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_IO_1" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_IO_2" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_IO_3" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_IO_4" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_IO_5" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_IO_6" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_IO_7" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_AN_0" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_AN_1" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_AN_2" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_AN_3" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_AN_4" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_AN_5" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_AN_6" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="CON_AN_7" library="Seeedstudio_Connector" deviceset="TWIG-4P-2.0" device="-2.0"/>
+<part name="TP5V" library="testpad" deviceset="TP" device="TP12R"/>
+<part name="TP3V" library="testpad" deviceset="TP" device="TP12R"/>
+<part name="TPGND" library="testpad" deviceset="TP" device="TP12R"/>
 </parts>
 <sheets>
 <sheet>
@@ -22020,8 +22027,8 @@ Clock</text>
 <text x="289.56" y="20.32" size="1.778" layer="94">c.rincheval@digitalspirit.org</text>
 <text x="342.9" y="20.32" size="1.778" layer="94">Raspberry board</text>
 <wire x1="3.81" y1="195.58" x2="73.66" y2="195.58" width="0.4064" layer="98" style="shortdash"/>
-<wire x1="3.81" y1="60.96" x2="58.42" y2="60.96" width="0.4064" layer="98" style="shortdash"/>
-<wire x1="59.69" y1="60.96" x2="59.69" y2="5.08" width="0.4064" layer="98" style="shortdash"/>
+<wire x1="3.81" y1="60.96" x2="71.12" y2="60.96" width="0.4064" layer="98" style="shortdash"/>
+<wire x1="72.39" y1="60.96" x2="72.39" y2="5.08" width="0.4064" layer="98" style="shortdash"/>
 <text x="7.62" y="50.8" size="6.4516" layer="98" font="vector" ratio="20">Temp</text>
 <text x="7.62" y="45.72" size="3.81" layer="98" font="vector" ratio="20">(optional)</text>
 </plain>
@@ -22365,59 +22372,11 @@ Clock</text>
 <instance part="VSS40" gate="G$1" x="152.4" y="144.78" smashed="yes">
 <attribute name="VALUE" x="154.94" y="142.24" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CON_IO_0" gate="G$1" x="153.67" y="115.57" smashed="yes">
-<attribute name="NAME" x="152.4" y="123.19" size="1.778" layer="95"/>
-<attribute name="VALUE" x="156.21" y="111.76" size="1.27" layer="96" rot="R90"/>
-</instance>
-<instance part="CON_IO_1" gate="G$1" x="186.69" y="115.57" smashed="yes">
-<attribute name="NAME" x="185.42" y="123.19" size="1.778" layer="95"/>
-<attribute name="VALUE" x="189.23" y="111.76" size="1.27" layer="96" rot="R90"/>
-</instance>
-<instance part="CON_IO_2" gate="G$1" x="153.67" y="85.09" smashed="yes">
-<attribute name="NAME" x="152.4" y="92.71" size="1.778" layer="95"/>
-<attribute name="VALUE" x="156.21" y="81.28" size="1.27" layer="96" rot="R90"/>
-</instance>
-<instance part="CON_IO_3" gate="G$1" x="186.69" y="85.09" smashed="yes">
-<attribute name="NAME" x="185.42" y="92.71" size="1.778" layer="95"/>
-<attribute name="VALUE" x="189.23" y="81.28" size="1.27" layer="96" rot="R90"/>
-</instance>
-<instance part="CON_AN_0" gate="G$1" x="245.11" y="232.41" smashed="yes" rot="R90">
-<attribute name="NAME" x="248.92" y="240.03" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="248.92" y="234.95" size="1.27" layer="96" rot="R180"/>
-</instance>
-<instance part="CON_AN_1" gate="G$1" x="257.81" y="232.41" smashed="yes" rot="R90">
-<attribute name="NAME" x="261.62" y="240.03" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="261.62" y="234.95" size="1.27" layer="96" rot="R180"/>
-</instance>
-<instance part="CON_AN_2" gate="G$1" x="270.51" y="232.41" smashed="yes" rot="R90">
-<attribute name="NAME" x="274.32" y="240.03" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="274.32" y="234.95" size="1.27" layer="96" rot="R180"/>
-</instance>
-<instance part="CON_AN_3" gate="G$1" x="283.21" y="232.41" smashed="yes" rot="R90">
-<attribute name="NAME" x="287.02" y="240.03" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="287.02" y="234.95" size="1.27" layer="96" rot="R180"/>
-</instance>
-<instance part="CON_I2C_1" gate="G$1" x="44.45" y="105.41" smashed="yes" rot="R180">
-<attribute name="NAME" x="45.72" y="97.79" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="41.91" y="109.22" size="1.27" layer="96" rot="R270"/>
-</instance>
-<instance part="CON_I2C_0" gate="G$1" x="19.05" y="105.41" smashed="yes" rot="R180">
-<attribute name="NAME" x="20.32" y="97.79" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="16.51" y="109.22" size="1.27" layer="96" rot="R270"/>
-</instance>
-<instance part="CON_SERIAL" gate="G$1" x="44.45" y="77.47" smashed="yes" rot="R180">
-<attribute name="NAME" x="45.72" y="69.85" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="41.91" y="81.28" size="1.27" layer="96" rot="R270"/>
-</instance>
 <instance part="VSS41" gate="G$1" x="25.4" y="68.58" smashed="yes">
 <attribute name="VALUE" x="27.94" y="66.04" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="P+15" gate="1" x="27.94" y="86.36" smashed="yes">
 <attribute name="VALUE" x="30.48" y="88.9" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CON_I2C_2" gate="G$1" x="19.05" y="77.47" smashed="yes" rot="R180">
-<attribute name="NAME" x="20.32" y="69.85" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="16.51" y="81.28" size="1.27" layer="96" rot="R270"/>
 </instance>
 <instance part="C11" gate="G$1" x="353.06" y="111.76" smashed="yes" rot="R180">
 <attribute name="NAME" x="357.124" y="114.681" size="1.778" layer="95"/>
@@ -22546,22 +22505,6 @@ Clock</text>
 <instance part="VSS64" gate="G$1" x="337.82" y="104.14" smashed="yes">
 <attribute name="VALUE" x="340.36" y="101.6" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="CON_AN_4" gate="G$1" x="245.11" y="115.57" smashed="yes" rot="R90">
-<attribute name="NAME" x="248.92" y="123.19" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="248.92" y="118.11" size="1.27" layer="96" rot="R180"/>
-</instance>
-<instance part="CON_AN_5" gate="G$1" x="257.81" y="115.57" smashed="yes" rot="R90">
-<attribute name="NAME" x="261.62" y="123.19" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="261.62" y="118.11" size="1.27" layer="96" rot="R180"/>
-</instance>
-<instance part="CON_AN_6" gate="G$1" x="270.51" y="115.57" smashed="yes" rot="R90">
-<attribute name="NAME" x="274.32" y="123.19" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="274.32" y="118.11" size="1.27" layer="96" rot="R180"/>
-</instance>
-<instance part="CON_AN_7" gate="G$1" x="283.21" y="115.57" smashed="yes" rot="R90">
-<attribute name="NAME" x="287.02" y="123.19" size="1.27" layer="95" rot="R180"/>
-<attribute name="VALUE" x="287.02" y="118.11" size="1.27" layer="96" rot="R180"/>
-</instance>
 <instance part="IC2" gate="G$1" x="101.6" y="30.48"/>
 <instance part="IC4" gate="A" x="350.52" y="187.96"/>
 <instance part="IC5" gate="A" x="350.52" y="71.12"/>
@@ -22575,18 +22518,18 @@ Clock</text>
 <attribute name="VALUE" x="106.68" y="53.34" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C7" gate="G$1" x="121.92" y="50.8"/>
-<instance part="C6" gate="G$1" x="68.58" y="50.8"/>
+<instance part="C6" gate="G$1" x="81.28" y="60.96"/>
 <instance part="P+18" gate="1" x="121.92" y="58.42" smashed="yes">
 <attribute name="VALUE" x="124.46" y="60.96" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="VSS65" gate="G$1" x="121.92" y="40.64" smashed="yes">
 <attribute name="VALUE" x="124.46" y="38.1" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="VSS66" gate="G$1" x="68.58" y="40.64" smashed="yes">
-<attribute name="VALUE" x="71.12" y="38.1" size="1.778" layer="96" rot="R180"/>
+<instance part="VSS66" gate="G$1" x="81.28" y="50.8" smashed="yes">
+<attribute name="VALUE" x="83.82" y="48.26" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="+3V22" gate="G$1" x="68.58" y="58.42" smashed="yes">
-<attribute name="VALUE" x="71.12" y="60.96" size="1.778" layer="96" rot="R180"/>
+<instance part="+3V22" gate="G$1" x="81.28" y="68.58" smashed="yes">
+<attribute name="VALUE" x="83.82" y="71.12" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="+3V23" gate="G$1" x="83.82" y="43.18" smashed="yes">
 <attribute name="VALUE" x="86.36" y="45.72" size="1.778" layer="96" rot="R180"/>
@@ -22614,22 +22557,6 @@ Clock</text>
 </instance>
 <instance part="P+22" gate="1" x="180.34" y="33.02" smashed="yes">
 <attribute name="VALUE" x="182.88" y="35.56" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="CON_IO_4" gate="G$1" x="153.67" y="54.61" smashed="yes">
-<attribute name="NAME" x="152.4" y="62.23" size="1.778" layer="95"/>
-<attribute name="VALUE" x="156.21" y="50.8" size="1.27" layer="96" rot="R90"/>
-</instance>
-<instance part="CON_IO_5" gate="G$1" x="186.69" y="54.61" smashed="yes">
-<attribute name="NAME" x="185.42" y="62.23" size="1.778" layer="95"/>
-<attribute name="VALUE" x="189.23" y="50.8" size="1.27" layer="96" rot="R90"/>
-</instance>
-<instance part="CON_IO_6" gate="G$1" x="153.67" y="24.13" smashed="yes">
-<attribute name="NAME" x="152.4" y="31.75" size="1.778" layer="95"/>
-<attribute name="VALUE" x="156.21" y="20.32" size="1.27" layer="96" rot="R90"/>
-</instance>
-<instance part="CON_IO_7" gate="G$1" x="186.69" y="24.13" smashed="yes">
-<attribute name="NAME" x="185.42" y="31.75" size="1.778" layer="95"/>
-<attribute name="VALUE" x="189.23" y="20.32" size="1.27" layer="96" rot="R90"/>
 </instance>
 <instance part="+3V24" gate="G$1" x="182.88" y="172.72" smashed="yes">
 <attribute name="VALUE" x="185.42" y="177.8" size="1.778" layer="96" rot="R180"/>
@@ -22703,6 +22630,73 @@ Clock</text>
 <attribute name="NAME" x="163.83" y="207.01" size="1.778" layer="95" rot="R180"/>
 <attribute name="TP_SIGNAL_NAME" x="166.37" y="207.01" size="1.778" layer="97" rot="R90"/>
 </instance>
+<instance part="J_ADR4" gate="G$1" x="63.5" y="22.86"/>
+<instance part="+3V28" gate="G$1" x="63.5" y="33.02" smashed="yes">
+<attribute name="VALUE" x="66.04" y="35.56" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="VSS72" gate="G$1" x="63.5" y="12.7" smashed="yes">
+<attribute name="VALUE" x="66.04" y="10.16" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="TALM" gate="G$1" x="58.42" y="35.56" smashed="yes">
+<attribute name="NAME" x="59.69" y="36.83" size="1.778" layer="95" rot="R90"/>
+<attribute name="TP_SIGNAL_NAME" x="59.69" y="34.29" size="1.778" layer="97"/>
+</instance>
+<instance part="CON_I2C_0" gate="G$1" x="19.05" y="105.41" rot="R180"/>
+<instance part="CON_I2C_1" gate="G$1" x="44.45" y="105.41" rot="R180"/>
+<instance part="CON_I2C_2" gate="G$1" x="19.05" y="77.47" rot="R180"/>
+<instance part="CON_SERIAL" gate="G$1" x="44.45" y="77.47" rot="R180"/>
+<instance part="CON_IO_0" gate="G$1" x="153.67" y="115.57"/>
+<instance part="CON_IO_1" gate="G$1" x="186.69" y="115.57"/>
+<instance part="CON_IO_2" gate="G$1" x="153.67" y="85.09"/>
+<instance part="CON_IO_3" gate="G$1" x="186.69" y="85.09"/>
+<instance part="CON_IO_4" gate="G$1" x="153.67" y="54.61"/>
+<instance part="CON_IO_5" gate="G$1" x="186.69" y="54.61"/>
+<instance part="CON_IO_6" gate="G$1" x="153.67" y="24.13"/>
+<instance part="CON_IO_7" gate="G$1" x="186.69" y="24.13"/>
+<instance part="CON_AN_0" gate="G$1" x="245.11" y="232.41" smashed="yes" rot="R90">
+<attribute name="NAME" x="250.19" y="238.76" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="248.92" y="234.95" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="CON_AN_1" gate="G$1" x="257.81" y="232.41" smashed="yes" rot="R90">
+<attribute name="NAME" x="262.89" y="238.76" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="261.62" y="234.95" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="CON_AN_2" gate="G$1" x="270.51" y="232.41" smashed="yes" rot="R90">
+<attribute name="NAME" x="275.59" y="238.76" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="274.32" y="234.95" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="CON_AN_3" gate="G$1" x="283.21" y="232.41" smashed="yes" rot="R90">
+<attribute name="NAME" x="288.29" y="238.76" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="287.02" y="234.95" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="CON_AN_4" gate="G$1" x="245.11" y="115.57" smashed="yes" rot="R90">
+<attribute name="NAME" x="250.19" y="121.92" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="248.92" y="118.11" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="CON_AN_5" gate="G$1" x="257.81" y="115.57" smashed="yes" rot="R90">
+<attribute name="NAME" x="262.89" y="121.92" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="261.62" y="118.11" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="CON_AN_6" gate="G$1" x="270.51" y="115.57" smashed="yes" rot="R90">
+<attribute name="NAME" x="275.59" y="121.92" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="274.32" y="118.11" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="CON_AN_7" gate="G$1" x="283.21" y="115.57" smashed="yes" rot="R90">
+<attribute name="NAME" x="288.29" y="121.92" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="287.02" y="118.11" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="TP5V" gate="G$1" x="191.77" y="233.68" smashed="yes" rot="R270">
+<attribute name="NAME" x="193.04" y="232.41" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="190.5" y="232.41" size="1.778" layer="97" rot="R270"/>
+</instance>
+<instance part="TP3V" gate="G$1" x="151.13" y="233.68" smashed="yes" rot="R90">
+<attribute name="NAME" x="149.86" y="234.95" size="1.778" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="152.4" y="234.95" size="1.778" layer="97" rot="R90"/>
+</instance>
+<instance part="TPGND" gate="G$1" x="148.59" y="203.2" smashed="yes" rot="R90">
+<attribute name="NAME" x="147.32" y="204.47" size="1.778" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="149.86" y="204.47" size="1.778" layer="97" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -22733,6 +22727,8 @@ Clock</text>
 <wire x1="170.18" y1="213.36" x2="154.94" y2="213.36" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="213.36" x2="154.94" y2="233.68" width="0.1524" layer="91"/>
 <junction x="154.94" y="233.68"/>
+<pinref part="TP3V" gate="G$1" pin="TP"/>
+<wire x1="154.94" y1="233.68" x2="153.67" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -22829,7 +22825,7 @@ Clock</text>
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
 <pinref part="+3V22" gate="G$1" pin="+3V3"/>
-<wire x1="68.58" y1="53.34" x2="68.58" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="63.5" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="OE"/>
@@ -22856,6 +22852,11 @@ Clock</text>
 <pinref part="C12" gate="G$1" pin="1"/>
 <pinref part="+3V27" gate="G$1" pin="+3V3"/>
 <wire x1="10.16" y1="27.94" x2="10.16" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J_ADR4" gate="G$1" pin="1"/>
+<pinref part="+3V28" gate="G$1" pin="+3V3"/>
+<wire x1="63.5" y1="30.48" x2="63.5" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ID_SC" class="0">
@@ -22907,6 +22908,8 @@ Clock</text>
 <wire x1="185.42" y1="231.14" x2="187.96" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="231.14" x2="187.96" y2="233.68" width="0.1524" layer="91"/>
 <junction x="187.96" y="233.68"/>
+<pinref part="TP5V" gate="G$1" pin="TP"/>
+<wire x1="187.96" y1="233.68" x2="189.23" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="VCC"/>
@@ -23311,6 +23314,8 @@ Clock</text>
 <junction x="152.4" y="203.2"/>
 <pinref part="VSS38" gate="G$1" pin="VSS"/>
 <junction x="162.56" y="185.42"/>
+<pinref part="TPGND" gate="G$1" pin="TP"/>
+<wire x1="152.4" y1="203.2" x2="151.13" y2="203.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="K1" gate="G$1" pin="6"/>
@@ -23478,7 +23483,7 @@ Clock</text>
 <segment>
 <pinref part="C6" gate="G$1" pin="2"/>
 <pinref part="VSS66" gate="G$1" pin="VSS"/>
-<wire x1="68.58" y1="43.18" x2="68.58" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="53.34" x2="81.28" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="VSS67" gate="G$1" pin="VSS"/>
@@ -23518,6 +23523,11 @@ Clock</text>
 <pinref part="C12" gate="G$1" pin="2"/>
 <pinref part="VSS71" gate="G$1" pin="VSS"/>
 <wire x1="10.16" y1="17.78" x2="10.16" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J_ADR4" gate="G$1" pin="3"/>
+<pinref part="VSS72" gate="G$1" pin="VSS"/>
+<wire x1="63.5" y1="15.24" x2="63.5" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -24360,6 +24370,21 @@ Clock</text>
 <pinref part="K1" gate="G$1" pin="23"/>
 <pinref part="TP12" gate="G$1" pin="TP"/>
 <wire x1="167.64" y1="205.74" x2="170.18" y2="205.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="IC6" gate="G$1" pin="ADR0"/>
+<pinref part="J_ADR4" gate="G$1" pin="2"/>
+<wire x1="58.42" y1="22.86" x2="55.88" y2="22.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="IC6" gate="G$1" pin="ALM"/>
+<wire x1="55.88" y1="30.48" x2="58.42" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="TALM" gate="G$1" pin="TP"/>
+<wire x1="58.42" y1="30.48" x2="58.42" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

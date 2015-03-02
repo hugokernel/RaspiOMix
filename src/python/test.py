@@ -12,16 +12,29 @@ import serial
 import RPi.GPIO as GPIO
 
 raspi = Raspiomix()
+IS_PLUS = not raspi.isPlus()
 
 info = None
-GPIOS = [
+
+GPIOS = (
     Raspiomix.IO0,
     Raspiomix.IO1,
     Raspiomix.IO2,
     Raspiomix.IO3,
+)
+
+if IS_PLUS:
+    GPIOS += (
+        Raspiomix.IO4,
+        Raspiomix.IO5,
+        Raspiomix.IO6,
+        Raspiomix.IO7,
+    )
+
+GPIOS += (
     Raspiomix.DIP0,
     Raspiomix.DIP1
-]
+)
 
 '''
  Channel #0 : [========================================================================================] 5.42
@@ -32,6 +45,18 @@ GPIOS = [
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
+
+'''
+import time
+for index in range(len(GPIOS)):
+    GPIO.setup(GPIOS[index], GPIO.IN)
+while True:
+    current = [ 0 ] * len(GPIOS)
+    for index in range(len(GPIOS)):
+        current[index] = GPIO.input(GPIOS[index])
+    print current
+    time.sleep(1)
+'''
 
 def fillwin(w, c):
     y, x = w.getmaxyx()
@@ -70,6 +95,9 @@ class Input(Window):
     mode = INPUT
     output_level = 0
 
+    STATE_LOW = '0'
+    STATE_HIGH = '1'
+
     def __init__(self, height, width, pos):
         self.pos = pos
         self.pad = curses.newpad(height, width)
@@ -79,8 +107,8 @@ class Input(Window):
         self.reset()
 
     def reset(self):
-        self.last = [ -1, -1, -1, -1, -1, -1 ]
-        self.current = [ 0, 0, 0, 0, 0, 0 ]
+        self.last = [ -1 ] * len(GPIOS)
+        self.current = [ 0 ] * len(GPIOS)
 
     def update(self, key = None):
 
@@ -98,34 +126,40 @@ class Input(Window):
         self.pad.addstr(2, 3, "           ")
         if self.mode == self.INPUT:
 
-            for index in range(0, 6):
-                GPIO.setup(GPIOS[index], GPIO.IN)
+            for io in GPIOS:
+                GPIO.setup(io, GPIO.IN)
 
             self.pad.addstr(2, 3, "Input mode", curses.A_UNDERLINE)
 
             #self.current = random.sample(range(5), 4)
-            for index in range(0, 6):
+            for index in range(len(GPIOS)):
                 self.current[index] = GPIO.input(GPIOS[index])
 
             if self.last != self.current:
                 self.pad.addstr(4, 3, "IO: ")
-                for channel in range(0, 4):
-                    status = 'HIGH' if self.current[channel] else 'LOW '
-                    self.pad.addstr(4, 8 + (channel * 7), "%i:%s" % (channel, status))
+                #for channel in range(0, 4):
+                for channel in range(len(GPIOS) - 2):
+                    status = self.STATE_HIGH if self.current[channel] else self.STATE_LOW + ' '
+                    self.pad.addstr(4, 8 + (channel * 5), "%i:%s" % (channel, status))
+
                 self.pad.addstr(6, 3, "DIP:")
-                for channel in range(4, 6):
-                    status = 'HIGH' if self.current[channel] else 'LOW '
-                    self.pad.addstr(6, 8 + ((channel - 4) * 7), "%i:%s" % (channel - 4, status))
+                i = 0
+                for channel in range(len(GPIOS) - 2, len(GPIOS)):
+                    status = self.STATE_HIGH if self.current[channel] else self.STATE_LOW + ' '
+                    self.pad.addstr(6, 8 + (i * 5), "%i:%s" % (i, status))
+                    i += 1
                 self.last = copy(self.current)
             self.pad.refresh(*self.pos)
         elif self.mode == self.OUTPUT:
-            for index in range(0, 4):
-                GPIO.setup(GPIOS[index], GPIO.OUT)
+
+            for io in GPIOS:
+                GPIO.setup(io, GPIO.OUT)
 
             self.pad.addstr(2, 3, "Output mode", curses.A_UNDERLINE)
-            for channel in range(0, 4):
+            #for channel in range(0, 4):
+            for channel in range(len(GPIOS) - 2):
                 GPIO.output(GPIOS[channel], GPIO.HIGH if self.output_level else GPIO.LOW)
-                status = 'HIGH' if self.output_level else 'LOW '
+                status = self.STATE_HIGH if self.output_level else self.STATE_LOW + ' '
                 information("status:%s, %i" % (status, self.output_level))
                 self.pad.addstr(4 + channel, 3, "Channel #%i : %s" % (channel, status))
 
@@ -134,10 +168,12 @@ class Input(Window):
 
 class Analog(Window):
 
-    last = [ -1, -1, -1, -1 ]
-    current = [ 0, 0, 0, 0 ]
+    last = [ -1 ] * 8
+    current = [ 0 ] * 8
 
     MAX_VALUE = 5.0
+
+    ADC_COUNT = 8 if IS_PLUS else 4
 
     def __init__(self, height, width, pos):
         self.pos = pos
@@ -146,50 +182,8 @@ class Analog(Window):
         self.pad.border()
         self.pad.addstr(0, 2, "Analog", curses.A_BOLD)
 
-<<<<<<< Updated upstream:src/test.py
-    def read(self):
-
-        varDivisior = 64 # from pdf sheet on adc addresses and config
-        varMultiplier = (3.3/varDivisior)/1000
-        import sys
-        #sys.exit(varMultiplier)
-        varMultiplier = 0.0000386
-
-        channels = [ 0, 0, 0, 0 ]
-
-        with i2c.I2CMaster() as bus:
-            def changechannel(address, adcConfig):
-                bus.transaction(i2c.writing_bytes(address, adcConfig))
-
-            def getadcreading(address):
-                h, m, l ,s = bus.transaction(i2c.reading(address,4))[0]
-                while (s & 128):
-                    h, m, l, s = bus.transaction(i2c.reading(address,4))[0]
-                # shift bits to product result
-                t = ((h & 0b00000001) << 16) | (m << 8) | l
-                # check if positive or negative number and invert if needed
-                if (h > 128):
-                    t = ~(0x020000 - t)
-                return t * varMultiplier
-
-            changechannel(Raspiomix.I2C_ADC_ADDRESS, 0x9C)
-            channels[0] = round(getadcreading(Raspiomix.I2C_ADC_ADDRESS), 2)
-
-            changechannel(Raspiomix.I2C_ADC_ADDRESS, 0xBC)
-            channels[1] = round(getadcreading(Raspiomix.I2C_ADC_ADDRESS), 2)
-
-            changechannel(Raspiomix.I2C_ADC_ADDRESS, 0xDC)
-            channels[2] = round(getadcreading(Raspiomix.I2C_ADC_ADDRESS), 2)
-
-            changechannel(Raspiomix.I2C_ADC_ADDRESS, 0xFC)
-            channels[3] = round(getadcreading(Raspiomix.I2C_ADC_ADDRESS), 2)
-
-            return channels
-
-=======
->>>>>>> Stashed changes:src__/python/test.py
     def update(self, key = None):
-        self.current = raspi.readAdc((0, 1, 2, 3))
+        self.current = raspi.readAdc(range(self.ADC_COUNT))
 
         width = self.size[1]
 
@@ -197,7 +191,7 @@ class Analog(Window):
         offset = int(((size[0] - 2) / 2) - 1)
 
         if self.last != self.current:
-            for channel in range(0, 4):
+            for channel in range(self.ADC_COUNT):
                 title = "Channel #%i : [%s] %0.2f   "
 
                 bar = ''
@@ -238,29 +232,12 @@ class I2C(Window):
             self.pad.addstr(2, 3, "Internal (RTC) :")
 
             try:
-                '''
-                with i2c.I2CMaster() as bus:
-
-                    bus.transaction(
-                        i2c.writing(Raspiomix.I2C_RTC_ADDRESS, 0),
-                    )
-
-                    second, minut, hours = bus.transaction(
-                        i2c.writing_bytes(Raspiomix.I2C_RTC_ADDRESS, 0x00),
-                        i2c.reading(Raspiomix.I2C_RTC_ADDRESS, 3)
-                    )[0]
-
-                    self.pad.addstr(3, 3, " %02i:%02i:%02i Ok !" % (self.bcd2int(hours & 0b0111111), self.bcd2int(minut), self.bcd2int(second)))
-
-                    self.internal_done = True
-                '''
-
                 self.pad.addstr(3, 3, '%s Ok !' % raspi.readRtc())
 
                 self.internal_done = True
 
-            except:
-                self.pad.addstr(3, 3, " - Writing, Reading : Ko !")
+            except IOError:
+                self.pad.addstr(3, 3, " - Writing, Reading : Ko (Maybe rtc_ds1307 module is loaded ?) !")
             finally:
                 self.refresh()
 
@@ -365,7 +342,7 @@ class Info(Window):
         self.pad = curses.newpad(height, width)
         self.pad.border()
         self.pad.addstr(0, 2, "Info", curses.A_BOLD)
-        self.pad.addstr(1, 3, 'Running...')
+        self.pad.addstr(1, 3, "Running on RaspiO'Mix" + ("+ Oh yeah ! ;)" if IS_PLUS else '') + "...")
 
     def update(self, key = None):
         status = 'OK'
