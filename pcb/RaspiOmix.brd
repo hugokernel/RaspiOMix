@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -141,7 +141,7 @@
 <wire x1="68.42125" y1="12.54125" x2="71.91375" y2="13.49375" width="0.127" layer="25"/>
 <text x="4.1275" y="37.465" size="1.27" layer="25">DIP0</text>
 <text x="4.1275" y="28.575" size="1.27" layer="25">DIP1</text>
-<text x="41.5925" y="25.4" size="1.4224" layer="25">rev 1.1.0</text>
+<text x="41.5925" y="25.4" size="1.4224" layer="25">rev 1.1.1</text>
 <text x="35.56" y="27.305" size="1.9304" layer="25">RaspiO'Mix</text>
 <text x="22.225" y="24.13" size="1.4224" layer="25">CC-BY-SA </text>
 <text x="10.795" y="2.2225" size="1.778" layer="26" rot="MR0">SERIAL</text>
@@ -1158,7 +1158,7 @@ design rules under a new name.</description>
 </element>
 <element name="C31" library="rcl" package="C0805" value="100nf" x="53.6575" y="45.085" rot="R180"/>
 <element name="CR1220" library="adafruit" package="CR1220-THM" value="" x="77.1525" y="26.3525" smashed="yes" rot="R270">
-<attribute name="NAME" x="82.7545" y="31.496" size="1.6764" layer="25" font="vector" rot="R270"/>
+<attribute name="NAME" x="78.994" y="15.762" size="1.016" layer="25" font="vector"/>
 <attribute name="VALUE" x="72.6025" y="30.6705" size="1.6764" layer="27" font="vector" rot="R270"/>
 </element>
 <element name="IC1" library="eagleParts" package="SOIC-14" value="MCP3424-E/SL" x="59.055" y="14.9225" smashed="yes" rot="R270">
@@ -1328,7 +1328,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="32.004" y="45.72" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="33.3375" y="48.26" size="0.0254" layer="27"/>
 </element>
-<element name="U$2" library="battery-holder" package="HARWIN-CR1220" value="CR1220-HOLDER" x="77.1525" y="25.0825" rot="R180"/>
+<element name="U$2" library="battery-holder" package="HARWIN-CR1220" value="CR1220-HOLDER" x="77.1525" y="25.0825" smashed="yes" rot="R180">
+<attribute name="NAME" x="80.1525" y="25.0825" size="1.27" layer="25" rot="R180" display="off"/>
+<attribute name="VALUE" x="80.1525" y="26.8325" size="1.27" layer="27" rot="R180"/>
+</element>
 </elements>
 <signals>
 <signal name="VSS">

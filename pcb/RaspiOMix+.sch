@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -21771,13 +21771,13 @@ Alert output</description>
 <parts>
 <part name="K1" library="FLYFISH" deviceset="PIN20X2" device=""/>
 <part name="FRAME1" library="frames" deviceset="A3L-LOC" device=""/>
-<part name="U1" library="FLYFISH" deviceset="EEPROM24" device=""/>
+<part name="IC7" library="FLYFISH" deviceset="EEPROM24" device=""/>
 <part name="R6" library="resistor" deviceset="R-EU_" device="M0805" value="3k9">
 <attribute name="TOLERANCE" value="5%"/>
 </part>
 <part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
-<part name="C3" library="resistor" deviceset="C-EU" device="C0805K" value="100nF">
+<part name="C12" library="resistor" deviceset="C-EU" device="C0805K" value="100nf">
 <attribute name="DIELECTRIC" value="X7R"/>
 </part>
 <part name="R7" library="resistor" deviceset="R-EU_" device="M0805" value="3k9">
@@ -21795,15 +21795,15 @@ Alert output</description>
 <part name="VSS32" library="supply1" deviceset="VSS" device=""/>
 <part name="P+12" library="supply1" deviceset="+5V" device=""/>
 <part name="IC3" library="eagleParts" deviceset="DS1307" device="" value="DS1307"/>
-<part name="Q6" library="crystal" deviceset="CRYSTAL" device="TC26H"/>
+<part name="Q6" library="crystal" deviceset="CRYSTAL" device="TC26H" value="32.768khz"/>
 <part name="VSS50" library="supply1" deviceset="VSS" device=""/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="P+33" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
-<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
+<part name="C8" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="P+24" library="supply1" deviceset="+5V" device=""/>
-<part name="IC1" library="adafruit" deviceset="TXB0108PWR" device=""/>
+<part name="IC1" library="adafruit" deviceset="TXB0108PWR" device="" value="TXS0108PWR"/>
 <part name="VSS24" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
@@ -21865,7 +21865,7 @@ Alert output</description>
 <part name="VSS25" library="supply1" deviceset="VSS" device=""/>
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="VSS28" library="supply1" deviceset="VSS" device=""/>
-<part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
+<part name="C11" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
 <part name="VSS19" library="supply1" deviceset="VSS" device=""/>
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="C1" library="rcl" deviceset="CPOL-EU" device="D" value="220uf"/>
@@ -21882,7 +21882,7 @@ Alert output</description>
 <part name="VSS33" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V14" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V15" library="supply1" deviceset="+3V3" device=""/>
-<part name="C8" library="rcl" deviceset="CPOL-EU" device="B/3528-21R"/>
+<part name="C2" library="rcl" deviceset="CPOL-EU" device="B/3528-21R" value="1uf"/>
 <part name="+3V16" library="supply1" deviceset="+3V3" device=""/>
 <part name="VSS34" library="supply1" deviceset="VSS" device=""/>
 <part name="SJ1" library="jumper" deviceset="SJ" device=""/>
@@ -21895,7 +21895,7 @@ Alert output</description>
 <part name="VSS40" library="supply1" deviceset="VSS" device=""/>
 <part name="VSS41" library="supply1" deviceset="VSS" device=""/>
 <part name="P+15" library="supply1" deviceset="+5V" device=""/>
-<part name="C11" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
+<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
 <part name="VSS44" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="RA7" library="rcl" deviceset="R-EU_" device="M0805" value="10k 0.1%"/>
@@ -21932,10 +21932,10 @@ Alert output</description>
 <part name="VSS63" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V18" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V19" library="supply1" deviceset="+3V3" device=""/>
-<part name="C10" library="rcl" deviceset="CPOL-EU" device="B/3528-21R"/>
+<part name="C3" library="rcl" deviceset="CPOL-EU" device="B/3528-21R" value="1uf"/>
 <part name="+3V20" library="supply1" deviceset="+3V3" device=""/>
 <part name="VSS64" library="supply1" deviceset="VSS" device=""/>
-<part name="IC2" library="adafruit" deviceset="TXB0104PWR" device=""/>
+<part name="IC2" library="adafruit" deviceset="TXB0104PWR" device="" value="TXB0104PWR"/>
 <part name="IC4" library="eagleParts" deviceset="MCP3424-E/ST" device=""/>
 <part name="IC5" library="eagleParts" deviceset="MCP3424-E/ST" device=""/>
 <part name="VSS42" library="supply1" deviceset="VSS" device=""/>
@@ -21970,7 +21970,7 @@ Alert output</description>
 <part name="IC6" library="tmp10x" deviceset="TMP101" device=""/>
 <part name="VSS57" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V26" library="supply1" deviceset="+3V3" device=""/>
-<part name="C12" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
+<part name="C10" library="rcl" deviceset="C-EU" device="C0805" value="100nf"/>
 <part name="VSS71" library="supply1" deviceset="VSS" device=""/>
 <part name="+3V27" library="supply1" deviceset="+3V3" device=""/>
 <part name="TP8" library="testpad" deviceset="TP" device="TP12R"/>
@@ -22035,7 +22035,7 @@ Clock</text>
 <instances>
 <instance part="K1" gate="G$1" x="177.8" y="210.82" rot="R180"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="U1" gate="G$1" x="165.1" y="154.94" smashed="yes">
+<instance part="IC7" gate="G$1" x="165.1" y="154.94" smashed="yes">
 <attribute name="NAME" x="162.56" y="163.83" size="1.778" layer="95"/>
 <attribute name="VALUE" x="157.48" y="144.78" size="1.778" layer="96"/>
 </instance>
@@ -22050,7 +22050,7 @@ Clock</text>
 <instance part="+3V1" gate="G$1" x="154.94" y="241.3" smashed="yes">
 <attribute name="VALUE" x="157.48" y="243.84" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C3" gate="G$1" x="195.58" y="154.94">
+<instance part="C12" gate="G$1" x="195.58" y="154.94">
 <attribute name="DIELECTRIC" x="195.58" y="154.94" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="R7" gate="G$1" x="187.96" y="162.56" smashed="yes" rot="R90">
@@ -22087,7 +22087,7 @@ Clock</text>
 <instance part="IC3" gate="G$1" x="111.76" y="195.58"/>
 <instance part="Q6" gate="G$1" x="91.44" y="200.66" smashed="yes" rot="R270">
 <attribute name="NAME" x="93.98" y="200.406" size="1.778" layer="95"/>
-<attribute name="VALUE" x="88.9" y="198.12" size="1.778" layer="96" rot="R270"/>
+<attribute name="VALUE" x="81.28" y="195.58" size="1.778" layer="96"/>
 </instance>
 <instance part="VSS50" gate="G$1" x="96.52" y="175.26" smashed="yes">
 <attribute name="VALUE" x="99.06" y="172.72" size="1.778" layer="96" rot="R180"/>
@@ -22102,7 +22102,7 @@ Clock</text>
 <instance part="+3V3" gate="G$1" x="132.08" y="215.9" smashed="yes">
 <attribute name="VALUE" x="134.62" y="218.44" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C9" gate="G$1" x="353.06" y="228.6" smashed="yes" rot="R180">
+<instance part="C8" gate="G$1" x="353.06" y="228.6" smashed="yes" rot="R180">
 <attribute name="NAME" x="357.124" y="231.521" size="1.778" layer="95"/>
 <attribute name="VALUE" x="357.124" y="228.981" size="1.778" layer="96"/>
 </instance>
@@ -22302,7 +22302,7 @@ Clock</text>
 <instance part="VSS28" gate="G$1" x="12.7" y="203.2" smashed="yes">
 <attribute name="VALUE" x="15.24" y="200.66" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C2" gate="G$1" x="83.82" y="220.98"/>
+<instance part="C11" gate="G$1" x="83.82" y="220.98"/>
 <instance part="VSS19" gate="G$1" x="83.82" y="210.82" smashed="yes">
 <attribute name="VALUE" x="86.36" y="208.28" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -22345,7 +22345,7 @@ Clock</text>
 <instance part="+3V15" gate="G$1" x="259.08" y="160.02" smashed="yes">
 <attribute name="VALUE" x="261.62" y="162.56" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C8" gate="G$1" x="337.82" y="231.14"/>
+<instance part="C2" gate="G$1" x="337.82" y="231.14"/>
 <instance part="+3V16" gate="G$1" x="337.82" y="238.76" smashed="yes">
 <attribute name="VALUE" x="340.36" y="241.3" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -22378,7 +22378,7 @@ Clock</text>
 <instance part="P+15" gate="1" x="27.94" y="86.36" smashed="yes">
 <attribute name="VALUE" x="30.48" y="88.9" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C11" gate="G$1" x="353.06" y="111.76" smashed="yes" rot="R180">
+<instance part="C9" gate="G$1" x="353.06" y="111.76" smashed="yes" rot="R180">
 <attribute name="NAME" x="357.124" y="114.681" size="1.778" layer="95"/>
 <attribute name="VALUE" x="357.124" y="112.141" size="1.778" layer="96"/>
 </instance>
@@ -22498,7 +22498,7 @@ Clock</text>
 <instance part="+3V19" gate="G$1" x="259.08" y="43.18" smashed="yes">
 <attribute name="VALUE" x="261.62" y="45.72" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C10" gate="G$1" x="337.82" y="114.3"/>
+<instance part="C3" gate="G$1" x="337.82" y="114.3"/>
 <instance part="+3V20" gate="G$1" x="337.82" y="121.92" smashed="yes">
 <attribute name="VALUE" x="340.36" y="124.46" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -22603,7 +22603,7 @@ Clock</text>
 <instance part="+3V26" gate="G$1" x="43.18" y="45.72" smashed="yes">
 <attribute name="VALUE" x="45.72" y="48.26" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C12" gate="G$1" x="10.16" y="25.4"/>
+<instance part="C10" gate="G$1" x="10.16" y="25.4"/>
 <instance part="VSS71" gate="G$1" x="10.16" y="15.24" smashed="yes">
 <attribute name="VALUE" x="12.7" y="12.7" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -22703,7 +22703,7 @@ Clock</text>
 <nets>
 <net name="+3V3" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="VCC"/>
+<pinref part="IC7" gate="G$1" pin="VCC"/>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
 <wire x1="175.26" y1="160.02" x2="177.8" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="160.02" x2="177.8" y2="170.18" width="0.1524" layer="91"/>
@@ -22714,7 +22714,7 @@ Clock</text>
 <wire x1="152.4" y1="175.26" x2="152.4" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="C12" gate="G$1" pin="1"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 <wire x1="195.58" y1="170.18" x2="195.58" y2="157.48" width="0.1524" layer="91"/>
 </segment>
@@ -22773,7 +22773,7 @@ Clock</text>
 <pinref part="+3V12" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="C9" gate="G$1" pin="2"/>
+<pinref part="C8" gate="G$1" pin="2"/>
 <pinref part="+3V13" gate="G$1" pin="+3V3"/>
 <wire x1="353.06" y1="236.22" x2="353.06" y2="233.68" width="0.1524" layer="91"/>
 </segment>
@@ -22788,7 +22788,7 @@ Clock</text>
 <wire x1="259.08" y1="157.48" x2="259.08" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C8" gate="G$1" pin="+"/>
+<pinref part="C2" gate="G$1" pin="+"/>
 <pinref part="+3V16" gate="G$1" pin="+3V3"/>
 <wire x1="337.82" y1="236.22" x2="337.82" y2="233.68" width="0.1524" layer="91"/>
 </segment>
@@ -22799,7 +22799,7 @@ Clock</text>
 <pinref part="IC5" gate="A" pin="VDD"/>
 </segment>
 <segment>
-<pinref part="C11" gate="G$1" pin="2"/>
+<pinref part="C9" gate="G$1" pin="2"/>
 <pinref part="+3V17" gate="G$1" pin="+3V3"/>
 <wire x1="353.06" y1="119.38" x2="353.06" y2="116.84" width="0.1524" layer="91"/>
 </segment>
@@ -22814,7 +22814,7 @@ Clock</text>
 <wire x1="259.08" y1="40.64" x2="259.08" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C10" gate="G$1" pin="+"/>
+<pinref part="C3" gate="G$1" pin="+"/>
 <pinref part="+3V20" gate="G$1" pin="+3V3"/>
 <wire x1="337.82" y1="119.38" x2="337.82" y2="116.84" width="0.1524" layer="91"/>
 </segment>
@@ -22849,7 +22849,7 @@ Clock</text>
 <wire x1="43.18" y1="43.18" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C12" gate="G$1" pin="1"/>
+<pinref part="C10" gate="G$1" pin="1"/>
 <pinref part="+3V27" gate="G$1" pin="+3V3"/>
 <wire x1="10.16" y1="27.94" x2="10.16" y2="30.48" width="0.1524" layer="91"/>
 </segment>
@@ -22868,14 +22868,14 @@ Clock</text>
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="182.88" y1="154.94" x2="182.88" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="SCL"/>
+<pinref part="IC7" gate="G$1" pin="SCL"/>
 <wire x1="175.26" y1="154.94" x2="182.88" y2="154.94" width="0.1524" layer="91"/>
 <label x="175.26" y="154.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ID_SD" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="SDA"/>
+<pinref part="IC7" gate="G$1" pin="SDA"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="175.26" y1="152.4" x2="187.96" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="152.4" x2="187.96" y2="157.48" width="0.1524" layer="91"/>
@@ -22889,7 +22889,7 @@ Clock</text>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="WP"/>
+<pinref part="IC7" gate="G$1" pin="WP"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="154.94" y1="160.02" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="160.02" x2="152.4" y2="162.56" width="0.1524" layer="91"/>
@@ -22964,7 +22964,7 @@ Clock</text>
 <pinref part="C1" gate="G$1" pin="+"/>
 </segment>
 <segment>
-<pinref part="C2" gate="G$1" pin="1"/>
+<pinref part="C11" gate="G$1" pin="1"/>
 <pinref part="P+11" gate="1" pin="+5V"/>
 <wire x1="83.82" y1="226.06" x2="83.82" y2="223.52" width="0.1524" layer="91"/>
 </segment>
@@ -23150,7 +23150,7 @@ Clock</text>
 <pinref part="CON_I2C_1" gate="G$1" pin="4"/>
 </segment>
 <segment>
-<pinref part="C9" gate="G$1" pin="1"/>
+<pinref part="C8" gate="G$1" pin="1"/>
 <pinref part="VSS18" gate="G$1" pin="VSS"/>
 <wire x1="353.06" y1="223.52" x2="353.06" y2="226.06" width="0.1524" layer="91"/>
 </segment>
@@ -23180,7 +23180,7 @@ Clock</text>
 <pinref part="C1" gate="G$1" pin="-"/>
 </segment>
 <segment>
-<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="C11" gate="G$1" pin="2"/>
 <pinref part="VSS19" gate="G$1" pin="VSS"/>
 <wire x1="83.82" y1="213.36" x2="83.82" y2="215.9" width="0.1524" layer="91"/>
 </segment>
@@ -23224,7 +23224,7 @@ Clock</text>
 <wire x1="259.08" y1="142.24" x2="259.08" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C8" gate="G$1" pin="-"/>
+<pinref part="C2" gate="G$1" pin="-"/>
 <pinref part="VSS34" gate="G$1" pin="VSS"/>
 <wire x1="337.82" y1="223.52" x2="337.82" y2="226.06" width="0.1524" layer="91"/>
 </segment>
@@ -23340,17 +23340,17 @@ Clock</text>
 <pinref part="VSS39" gate="G$1" pin="VSS"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="A2"/>
+<pinref part="IC7" gate="G$1" pin="A2"/>
 <wire x1="154.94" y1="157.48" x2="152.4" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="157.48" x2="152.4" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
+<pinref part="IC7" gate="G$1" pin="GND"/>
 <wire x1="152.4" y1="154.94" x2="152.4" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="152.4" x2="152.4" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="149.86" x2="152.4" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="149.86" x2="152.4" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="A0"/>
+<pinref part="IC7" gate="G$1" pin="A0"/>
 <wire x1="154.94" y1="152.4" x2="152.4" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="A1"/>
+<pinref part="IC7" gate="G$1" pin="A1"/>
 <wire x1="154.94" y1="154.94" x2="152.4" y2="154.94" width="0.1524" layer="91"/>
 <junction x="152.4" y="149.86"/>
 <junction x="152.4" y="152.4"/>
@@ -23393,7 +23393,7 @@ Clock</text>
 <wire x1="241.3" y1="60.96" x2="241.3" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C11" gate="G$1" pin="1"/>
+<pinref part="C9" gate="G$1" pin="1"/>
 <pinref part="VSS55" gate="G$1" pin="VSS"/>
 <wire x1="353.06" y1="106.68" x2="353.06" y2="109.22" width="0.1524" layer="91"/>
 </segment>
@@ -23446,7 +23446,7 @@ Clock</text>
 <wire x1="259.08" y1="25.4" x2="259.08" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C10" gate="G$1" pin="-"/>
+<pinref part="C3" gate="G$1" pin="-"/>
 <pinref part="VSS64" gate="G$1" pin="VSS"/>
 <wire x1="337.82" y1="106.68" x2="337.82" y2="109.22" width="0.1524" layer="91"/>
 </segment>
@@ -23510,7 +23510,7 @@ Clock</text>
 <pinref part="CON_IO_7" gate="G$1" pin="4"/>
 </segment>
 <segment>
-<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="C12" gate="G$1" pin="2"/>
 <wire x1="195.58" y1="149.86" x2="195.58" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="VSS27" gate="G$1" pin="VSS"/>
 </segment>
@@ -23520,7 +23520,7 @@ Clock</text>
 <wire x1="43.18" y1="10.16" x2="43.18" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C12" gate="G$1" pin="2"/>
+<pinref part="C10" gate="G$1" pin="2"/>
 <pinref part="VSS71" gate="G$1" pin="VSS"/>
 <wire x1="10.16" y1="17.78" x2="10.16" y2="20.32" width="0.1524" layer="91"/>
 </segment>
