@@ -12,7 +12,7 @@ import serial
 import RPi.GPIO as GPIO
 
 raspi = Raspiomix()
-IS_PLUS = not raspi.isPlus()
+IS_PLUS = raspi.isPlus()
 
 info = None
 
@@ -254,17 +254,17 @@ class I2C(Window):
 
                 sleep(0.05)
 
-                out = raspi.i2c.read_byte(self.EEPROM_ADDRESS, 0x00)
+                read_results = raspi.i2c.read_byte_data(self.EEPROM_ADDRESS, 0x00)
 
                 self.pad.addstr(6, 3, " - Writing, Reading")
                 self.refresh()
 
-                for i in range(0, 4):
-                    if read_results[0][i] != array[i + 1]:
-                        raise
+                #for i in range(0, 4):
+                if read_results != array[0]: #[i + 1]:
+                    raise IOError
                 
-                #self.pad.addstr(6, 3, " - Writing, Reading : Ok !")
-                self.pad.addstr(6, 3, '->' + array[0] + out)
+                self.pad.addstr(6, 3, " - Writing, Reading : Ok !")
+                #self.pad.addstr(6, 3, '->' + '%s' % array[0] + ' %s' % read_results)
 
                 self.external_done = True
 
