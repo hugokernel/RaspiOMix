@@ -99,7 +99,7 @@ class Raspiomix(Raspiomix_Base):
             return format(h, m, l)
 
         out = []
-        for channel in channels:
+        for channel in ((channels,) if type(channels) == int else channels):
             i2c_address = self.I2C_ADC0_ADDRESS if channel < 4 else self.I2C_ADC1_ADDRESS
             channel = self.ADC0_CHANNELS[channel] if channel < 4 else self.ADC1_CHANNELS[channel - 4]
 
