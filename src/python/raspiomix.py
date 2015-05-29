@@ -42,6 +42,9 @@ class Raspiomix_Base:
     IO6 = 31
     IO7 = 29
 
+    SERIAL_TX = 8
+    SERIAL_RX = 10
+
     DEVICE = '/dev/ttyAMA0'
 
 class Raspiomix(Raspiomix_Base):
